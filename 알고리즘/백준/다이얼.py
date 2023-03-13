@@ -16,8 +16,6 @@ def num(n):
     elif n in 'WXYZ':
         return 10
 
-
-
 N = input()
 res = 0
 
