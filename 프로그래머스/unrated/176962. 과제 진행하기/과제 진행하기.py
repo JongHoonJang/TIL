@@ -3,14 +3,14 @@ def solution(plans):
     plans.sort(key = lambda x : x[1])
     ing = []
     time = []
+    
     for n, s, p in plans:
         h, m = map(int, s.split(':'))
         time.append(h * 60 + m)
+    
     i = 0
     n_t = time[i]
-
     while True:
-
         if n_t == time[-1]:
             answer.append(plans[-1][0])
             break
@@ -33,14 +33,10 @@ def solution(plans):
                 else:
                     ing.append([n1, n_t + t1 - time[i]])
                     n_t = time[i]
-                    
-                
             else:
                 n_t = time[i]
-                
-
+            
     for data, _ in reversed(ing):
         answer.append(data)
 
-    
     return answer
