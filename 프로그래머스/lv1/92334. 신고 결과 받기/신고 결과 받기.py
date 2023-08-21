@@ -1,7 +1,7 @@
 def solution(id_list, report, k):
     answer = []
     id_report = {}
-    for re in report:
+    for re in set(report):
         a, b = re.split()
         if b not in id_report:
             id_report[b] = [a]
